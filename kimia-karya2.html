@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek Kimia 2 - Portofolio</title>
+  <link rel="stylesheet" href="style-kimia-detail.css">
+</head>
+<body>
+  <div class="hamon-ticker">
+    🔮 PART 2: BATTLE TENDENCY • JOSEPH JOESTAR LAB • PROYEK 02 🔮
+  </div>
+
+  <nav class="hm-navbar">
+    <a href="kimia.html" class="hm-nav-btn nav-back">← Kembali ke Daftar Kimia</a>
+    <a href="index.html" class="hm-nav-btn nav-home">★ Portofolio Utama</a>
+  </nav>
+
+  <main class="hm-container">
+    <article class="lab-sheet">
+      <!-- 1. JUDUL SUB PROYEK KIMIA -->
+      <header class="lab-header">
+        <span class="hamon-badge" style="background: linear-gradient(90deg, #065f46, #10b981); color: #ffffff;">🔮 JOSEPH JOESTAR • PROYEK KIMIA 02</span>
+        <h1>Praktikum Polimer Superabsorben</h1>
+        <div class="lab-meta">
+          <span>Mapel: Kimia</span>
+          <span>Kategori: Praktikum</span>
+          <span>Tahun: 2026</span>
+        </div>
+      </header>
+
+      <!-- GIMMICK INTERAKTIF PART 1 & 2 -->
+      <div class="gimmick-bar">
+        <button type="button" class="hm-btn btn-sunlight" onclick="toggleHamon()">
+          ☀️ HAMON CLACKER VOLLEY!
+        </button>
+        <button type="button" class="hm-btn btn-predict" onclick="nextYouWillSay()">
+          🔮 TSUGI NI OMAE WA...
+        </button>
+      </div>
+      <div id="hmQuote" class="prediction-banner">
+        "Kalimatmu berikutnya adalah: 'Eksperimen ini seru juga ya!' ...TO IU!"
+      </div>
+
+      <!-- 2. FOTO DOKUMENTASI PERTAMA -->
+      <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>📸 DOKUMENTASI 01 • HASIL PERCOBAAN</span>
+          <span>CLACKER VOLLEY!</span>
+        </div>
+        <img
+          src="images/ss5.png"
+          alt="Dokumentasi 1 Proyek Kimia 2"
+          onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22450%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23064e3b%22/><text x=%2250%25%22 y=%2248%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23facc15%22 font-family=%22Arial%22 font-size=%2224%22 font-weight=%22bold%22>🧪 TEMPAT FOTO DOKUMENTASI 1</text><text x=%2250%25%22 y=%2258%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23a7f3d0%22 font-family=%22Arial%22 font-size=%2216%22>(Masukkan foto ke folder images/kimia2-foto1.jpg)</text></svg>'"
+        >
+        <figcaption class="photo-caption">
+          Hasilnya
+        </figcaption>
+      </figure>
+
+      <!-- 3. SPACE PENJELASAN KEGIATAN / PRAKTIKUM -->
+      <section class="story-box" style="border-left-color: #10b981;">
+        <h2 style="color: #065f46;">🔮 Penjelasan Praktikum &amp; Kegiatan</h2>
+        <p>
+          Menguji seberapa besar kemampuan natrium poliakrilat menyerap dan memerangkap molekul air.
+        </p>
+        <p>
+          Serbuk dari popok akan menjadi jelly karena menyerap larutan dari Nacl
+        </p>
+      </section>
+
+      <!-- GIMMICK RED STONE OF AJA -->
+      <div class="aja-section">
+        <button type="button" id="ajaBtn" class="aja-btn" onclick="toggleAja()">
+          💎 RED STONE OF AJA: BUKA KESIMPULAN SINGKAT
+        </button>
+        <div id="ajaBox" class="aja-content">
+          <strong>📌 Alat &amp; Bahan:</strong> Menggunakan serbuk putih dari popok bayi, larutan NaCl, serta pewarna makanan sebagai bahan praktikum
+        </div>
+      </div>
+
+      <!-- 4. FOTO DOKUMENTASI KEDUA -->
+       <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>🎬 DOKUMENTASI VIDEO • LIVE REPLAY</span>
+          <span>MOODY BLUES!</span>
+        </div>
+
+        <!-- Ganti src dengan nama file MP4 kamu di dalam folder images -->
+        <video
+          src="images/vid5.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          style="
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+            border: 3px solid #000000;
+            background-color: #16071c;
+          "
+        >
+          Browser kamu tidak mendukung pemutaran video MP4.
+        </video>
+
+        <figcaption class="photo-caption">
+          Menuangkan larutan NaCl ke serbuk untuk memicu reaksi
+        </figcaption>
+      </figure>
+
+      <!-- NAVIGASI ANTAR PROYEK KIMIA -->
+      <nav class="sub-nav" aria-label="Navigasi Proyek Kimia">
+        <div class="sub-nav-title">★ Jelajahi Proyek Kimia Lainnya ★</div>
+        <div class="sub-nav-links">
+          <a href="kimia-karya1.html">☀️ Proyek 1</a>
+          <a href="kimia-karya2.html" class="active-karya">🔮 Proyek 2</a>
+          <a href="kimia-karya3.html">🫧 Proyek 3</a>
+        </div>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="hm-footer">
+    <p style="margin: 0 0 8px;">© 2026 Axel Sectio Reginaldi · Hamon Saga Chemistry Edition</p>
+    <a href="kimia.html">← Kembali ke Proyek Kimia</a>
+  </footer>
+
+  <script>
+    function toggleHamon() {
+      document.body.classList.toggle("hamon-overdrive");
+      const q = document.getElementById("hmQuote");
+      q.textContent = document.body.classList.contains("hamon-overdrive")
+        ? "⚡ HAMON CLACKER VOLLEY! Energi penuh menyelimuti laboratorium!"
+        : "🔮 Aura kembali normal. Klik lagi kapan saja!";
+    }
+
+    const josephLines = [
+      "🔮 Kalimatmu berikutnya adalah: 'Hasil reaksinya sesuai teori!' ...TO IU!",
+      "👌 NIIIIICE! Strategi 1000 IQ ala Joseph Joestar berhasil!",
+      "🗿 PILLAR MEN AWAKEN! Ayayayaya~ Reaksi kimia mulai berlangsung!",
+      "☀️ Pernapasan adalah kunci utama Hamon dan reaksi pembakaran!"
+    ];
+    let jIdx = 0;
+    function nextYouWillSay() {
+      document.getElementById("hmQuote").textContent = josephLines[jIdx];
+      jIdx = (jIdx + 1) % josephLines.length;
+    }
+
+    function toggleAja() {
+      const box = document.getElementById("ajaBox");
+      const btn = document.getElementById("ajaBtn");
+      box.classList.toggle("open");
+      btn.textContent = box.classList.contains("open")
+        ? "💎 TUTUP CATATAN RED STONE OF AJA"
+        : "💎 RED STONE OF AJA: BUKA KESIMPULAN SINGKAT";
+    }
+
+    /** @param {HTMLElement} frame */
+    function togglePhotoZoom(frame) {
+      frame.classList.toggle("zoomed");
+    }
+  </script>
+</body>
+</html>

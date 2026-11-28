@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+    <style>
+        /* =========================================================
+           JOJO PART 7: STEEL BALL RUN (SBR) - 1890 RACE EDITION
+           ========================================================= */
+        :root {
+            --sbr-sky: #0284c7;
+            --sbr-sky-light: #38bdf8;
+            --sbr-navy: #0f172a;
+            --sbr-gold: #eab308;
+            --sbr-gold-bright: #facc15;
+            --sbr-emerald: #10b981;
+            --sbr-lime: #84cc16;
+            --sbr-tusk: #ec4899;
+            --sbr-parchment: #fbf5e6;
+            --sbr-parchment-dark: #f1e4c8;
+            --sbr-ink: #1c1917;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--sbr-ink);
+            /* Latar belakang langit senja gurun Amerika 1890 + pola bintang SBR */
+            background-color: #17153b;
+            background-image:
+                radial-gradient(circle at 20% 15%, rgba(56, 189, 248, 0.18) 0%, transparent 40%),
+                radial-gradient(circle at 80% 75%, rgba(236, 72, 153, 0.15) 0%, transparent 45%),
+                radial-gradient(#facc15 1px, transparent 1px),
+                radial-gradient(#38bdf8 1px, #13112e 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+            background-position: 0 0, 0 0, 0 0, 20px 20px;
+            overflow-x: hidden;
+        }
+
+        /* TICKER BALAPAN SBR DI PALING ATAS */
+        .sbr-ticker {
+            background-color: var(--sbr-navy);
+            color: var(--sbr-gold-bright);
+            border-bottom: 3px solid var(--sbr-gold);
+            padding: 7px 12px;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* HEADER UTAMA ALA POSTER STEEL BALL RUN */
+        .sbr-header {
+            background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 48%, #1e1b4b 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 36px 20px 30px;
+            border-bottom: 6px solid var(--sbr-gold-bright);
+            box-shadow: 0 8px 0px #000000;
+            position: relative;
+        }
+
+        .sbr-badge-top {
+            display: inline-block;
+            background-color: var(--sbr-gold-bright);
+            color: #000000;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            padding: 4px 14px;
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px #000000;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .sbr-header h1 {
+            margin: 0;
+            font-family: 'Arial Black', Impact, sans-serif;
+            font-size: clamp(30px, 6vw, 44px);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow:
+                3px 3px 0px #000000,
+                -2px -2px 0px var(--sbr-sky),
+                5px 5px 0px var(--sbr-tusk);
+        }
+
+        .sbr-subtitle {
+            margin: 14px auto 0;
+            display: inline-block;
+            background-color: var(--sbr-navy);
+            color: var(--sbr-sky-light);
+            padding: 7px 18px;
+            border: 3px solid var(--sbr-gold-bright);
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+            box-shadow: 4px 4px 0px #000000;
+        }
+
+        /* NAVIGASI STAGE BALAPAN */
+        .stage-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            max-width: 720px;
+            margin: 22px auto 0;
+            padding: 0 12px;
+        }
+
+        .stage-nav a {
+            background-color: var(--sbr-parchment);
+            color: var(--sbr-navy);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+            border: 3px solid #000000;
+            box-shadow: 4px 4px 0px var(--sbr-gold-bright);
+            text-transform: uppercase;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        .stage-nav a:hover, .stage-nav a:active {
+            background-color: var(--sbr-gold-bright);
+            transform: translate(-2px, -2px);
+        }
+
+        /* PANEL KERTAS PARCHMENT WESTERN (WANTED POSTER STYLE) */
+        .sbr-panel {
+            background: linear-gradient(180deg, var(--sbr-parchment) 0%, var(--sbr-parchment-dark) 100%);
+            padding: 28px 22px;
+            margin: 30px auto;
+            width: 92%;
+            max-width: 700px;
+            border: 4px solid #000000;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .shadow-sky { box-shadow: 8px 8px 0px var(--sbr-sky-light); }
+        .shadow-gold { box-shadow: 8px 8px 0px var(--sbr-gold-bright); }
+        .shadow-emerald { box-shadow: 8px 8px 0px var(--sbr-emerald); }
+
+        .stage-tag {
+            display: inline-block;
+            background-color: var(--sbr-navy);
+            color: var(--sbr-gold-bright);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            padding: 4px 12px;
+            border: 2px solid #000000;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        /* BAGIAN PROFIL - WANTED & ENTRANT POSTER */
+        .profile-panel {
+            text-align: center;
+        }
+
+        .wanted-header {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 900;
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #78350f;
+            border-top: 2px solid #78350f;
+            border-bottom: 2px solid #78350f;
+            padding: 5px 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 174px;
+            height: 174px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Cincin Golden Ratio berputar di sekitar foto */
+        .golden-ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 4px dashed var(--sbr-gold);
+            animation: slowSpin 14s linear infinite;
+        }
+
+        .golden-ring.hyper-spin {
+            border: 5px dashed var(--sbr-emerald);
+            animation: hyperSpin 0.6s linear infinite;
+        }
+
+        @keyframes slowSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes hyperSpin {
+            from { transform: rotate(0deg) scale(1.06); }
+            to { transform: rotate(360deg) scale(1.06); }
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--sbr-sky);
+            outline: 4px solid #000000;
+            box-shadow: 5px 5px 0px #000000;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+            background-color: #cbd5e1;
+        }
+
+        .profile-name {
+            color: #ffffff;
+            background: linear-gradient(90deg, var(--sbr-navy), #0369a1);
+            display: inline-block;
+            padding: 10px 22px;
+            border: 3px solid #000000;
+            box-shadow: 5px 5px 0px var(--sbr-gold-bright);
+            font-family: 'Arial Black', Impact, sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px #000000;
+            margin: 10px 0;
+        }
+
+        .profile-bio {
+            line-height: 1.8;
+            color: #1c1917;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 14px;
+            border: 2px dashed #78350f;
+            margin-top: 12px;
+        }
+
+        /* GIMMICK INTERAKTIF: STEEL BALL SPIN GENERATOR */
+        .spin-box {
+            margin-top: 18px;
+            padding: 14px;
+            background-color: var(--sbr-navy);
+            border: 3px solid #000000;
+            box-shadow: 5px 5px 0px var(--sbr-emerald);
+            color: #ffffff;
+        }
+
+        .spin-btn {
+            background: radial-gradient(circle at 30% 30%, #a3e635, #10b981 60%, #065f46 100%);
+            color: #000000;
+            font-family: 'Arial Black', Impact, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 10px 18px;
+            border: 3px solid #000000;
+            border-radius: 30px;
+            box-shadow: 3px 3px 0px var(--sbr-gold-bright);
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.1s ease;
+        }
+
+        .spin-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px var(--sbr-gold-bright);
+        }
+
+        .spin-output {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 900;
+            color: var(--sbr-gold-bright);
+            letter-spacing: 1px;
+            min-height: 20px;
+        }
+
+        /* JUDUL SECTION */
+        .section-title {
+            color: var(--sbr-navy);
+            text-align: center;
+            margin: 6px 0 8px;
+            font-family: 'Arial Black', Impact, sans-serif;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0px var(--sbr-gold-bright);
+        }
+
+        .section-desc {
+            text-align: center;
+            color: #44403c;
+            font-weight: bold;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        /* KARTU KEMAMPUAN AKADEMIK (STAND PARAMETERS) */
+        .skill-card {
+            background-color: #ffffff;
+            padding: 16px;
+            margin: 18px 0;
+            border: 3px solid #000000;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+
+        .skill-card:hover {
+            transform: translate(-2px, -2px);
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .skill-header h3 {
+            margin: 0;
+            font-family: 'Arial Black', Impact, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .act-badge {
+            font-size: 11px;
+            font-weight: 900;
+            padding: 3px 8px;
+            border: 2px solid #000000;
+            background-color: var(--sbr-gold-bright);
+            color: #000000;
+        }
+
+        .bar-track {
+            background-color: #000000;
+            height: 16px;
+            padding: 2px;
+            border-radius: 2px;
+            margin: 10px 0 6px;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 1px;
+            background-image: repeating-linear-gradient(
+                -45deg,
+                rgba(255,255,255,0.22),
+                rgba(255,255,255,0.22) 8px,
+                transparent 8px,
+                transparent 16px
+            );
+        }
+
+        /* RUTE CHECKPOINT PROYEK (TRANS-AMERICA TRAIL) */
+        .race-trail {
+            border-left: 5px dashed var(--sbr-navy);
+            padding-left: 18px;
+            margin-left: 8px;
+        }
+
+        .checkpoint-card {
+            background-color: #ffffff;
+            padding: 18px;
+            margin: 22px 0;
+            border: 3px solid #000000;
+            border-radius: 4px;
+            box-shadow: 6px 6px 0px #000000;
+            position: relative;
+        }
+
+        .checkpoint-dot {
+            position: absolute;
+            left: -31px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--sbr-gold-bright);
+            border: 3px solid #000000;
+            border-radius: 50%;
+            font-size: 10px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subject-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border: 2px solid #000000;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        .checkpoint-card h3 {
+            margin: 10px 0 8px;
+            color: var(--sbr-navy);
+            font-family: 'Arial Black', Impact, sans-serif;
+            text-transform: uppercase;
+        }
+
+        .sbr-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 3px solid #000000;
+            border-radius: 3px;
+            text-decoration: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .sbr-btn:hover {
+            transform: translate(-2px, -2px);
+        }
+
+        .sbr-btn:active {
+            transform: translate(2px, 2px);
+        }
+
+        /* TELEGRAPH / HUBUNGI SAYA */
+        .telegraph-panel {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #ffffff;
+            padding: 34px 22px;
+            margin: 30px auto;
+            width: 92%;
+            max-width: 660px;
+            border: 4px solid var(--sbr-gold-bright);
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 8px 8px 0px var(--sbr-tusk);
+        }
+
+        .contact-btn {
+            display: block;
+            padding: 16px;
+            margin: 14px 0;
+            border: 3px solid #000000;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.15s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translate(-2px, -2px);
+        }
+
+        .contact-sub {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-top: 5px;
+        }
+
+        /* FOOTER */
+        .sbr-footer {
+            background-color: #09090b;
+            color: var(--sbr-gold-bright);
+            border-top: 5px solid var(--sbr-sky-light);
+            text-align: center;
+            padding: 22px 15px;
+            margin-top: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 520px) {
+            .race-trail {
+                padding-left: 14px;
+                margin-left: 4px;
+            }
+            .checkpoint-dot {
+                left: -27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Ticker Balapan SBR -->
+    <div class="sbr-ticker">
+        ★ STEEL BALL RUN • 1890 TRANS-AMERICA PORTFOLIO • SAN DIEGO → NEW YORK ★
+    </div>
+
+    <!-- Bagian Header -->
+    <header class="sbr-header">
+        <div class="sbr-badge-top">★ PART 7: STEEL BALL RUN EDITION ★</div>
+        <h1>Portofolio Saya</h1>
+        <p class="sbr-subtitle">
+            Pelajar | Calon Web Developer
+        </p>
+
+        <!-- Navigasi Cepat Antar Stage -->
+        <nav class="stage-nav" aria-label="Navigasi Stage">
+            <a href="#stage-profil">★ Stage 1: Profil</a>
+            <a href="#stage-akademik">⚙ Stage 2: Akademik</a>
+            <a href="#stage-proyek">🏁 Stage 3: Proyek</a>
+            <a href="#stage-kontak">✉ Final: Kontak</a>
+        </nav>
+    </header>
+
+    <!-- Bagian Profil -->
+    <section id="stage-profil" class="sbr-panel shadow-sky profile-panel">
+        <div class="wanted-header">★ OFFICIAL RACE ENTRANT • NO. 0707 ★</div>
+
+        <div class="avatar-wrapper">
+            <div id="goldenRing" class="golden-ring"></div>
+            <img
+                src="images/IMG_20251211_100042.jpg"
+                alt="Foto profil"
+                class="profile-img"
+            >
+        </div>
+
+        <h2 class="profile-name">
+            ★ AXEL SECTIO REGINALDI ★
+        </h2>
+
+        <p class="profile-bio">
+            Halo! Saya Axel Sectio Reginaldi, seorang pelajar yang tertarik dengan dunia web development. Saya sedang belajar HTML dan CSS untuk membangun website yang menarik dan fungsional.
+        </p>
+
+        <!-- Gimmick Interaktif: Steel Ball Golden Spin -->
+        <div class="spin-box">
+            <button type="button" class="spin-btn" onclick="activateSpin()">
+                🟢 Putar Steel Ball (Golden Spin)
+            </button>
+            <div id="spinText" class="spin-output">
+                ★ Klik bola baja untuk mengaktifkan energi Golden Ratio! ★
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Keahlian -->
+    <!-- Bagian Kemampuan Akademik -->
+    <section id="stage-akademik" class="sbr-panel shadow-gold">
+        <div style="text-align: center;">
+            <span class="stage-tag">2ND STAGE • STAND & SPIN PARAMETERS</span>
+        </div>
+
+        <h2 class="section-title">
+            Kemampuan Akademik
+        </h2>
+
+        <p class="section-desc">
+            Mata pelajaran yang saya pelajari dan
+            kembangkan selama menempuh pendidikan di SMA.
+        </p>
+
+        <!-- Biologi -->
+        <div class="skill-card" style="border-left: 9px solid #10b981; box-shadow: 5px 5px 0px #10b981;" onclick="this.style.backgroundColor = this.style.backgroundColor === 'rgb(236, 253, 245)' ? '#ffffff' : '#ecfdf5'">
+            <div class="skill-header">
+                <h3 style="color: #065f46;">
+                    🧬Biologi
+                </h3>
+                <span class="act-badge" style="background-color: #a7f3d0;">SPIN ANATOMY • ACT 2</span>
+            </div>
+            <p style="color: #1c1917; margin: 10px 0;">
+                Mampu memahami konsep biologi,
+                memahami makhluk hidup serta organ tubuh manusia
+            </p>
+            <div class="bar-track">
+                <div class="bar-fill" style="background-color: #10b981; width: 70%;"></div>
+            </div>
+            <p style="font-size: 13px; font-weight: bold; color: #065f46; margin: 0;">
+                Contoh penguasaan: 70%
+            </p>
+        </div>
+
+        <!-- Bahasa Inggris -->
+        <div class="skill-card" style="border-left: 9px solid #0284c7; box-shadow: 5px 5px 0px #0284c7;" onclick="this.style.backgroundColor = this.style.backgroundColor === 'rgb(240, 249, 255)' ? '#ffffff' : '#f0f9ff'">
+            <div class="skill-header">
+                <h3 style="color: #075985;">
+                    🌎 Bahasa Inggris
+                </h3>
+                <span class="act-badge" style="background-color: #bae6fd;">JOHNNY'S LINGO • ACT 4</span>
+            </div>
+            <p style="color: #1c1917; margin: 10px 0;">
+                Mampu memahami kosakata, membaca teks,
+                dan melakukan percakapan sederhana.
+            </p>
+            <div class="bar-track">
+                <div class="bar-fill" style="background-color: #0284c7; width: 90%;"></div>
+            </div>
+            <p style="font-size: 13px; font-weight: bold; color: #075985; margin: 0;">
+                Contoh penguasaan: 90%
+            </p>
+        </div>
+
+        <!-- Informatika -->
+        <div class="skill-card" style="border-left: 9px solid #ec4899; box-shadow: 5px 5px 0px #ec4899;" onclick="this.style.backgroundColor = this.style.backgroundColor === 'rgb(253, 242, 248)' ? '#ffffff' : '#fdf2f8'">
+            <div class="skill-header">
+                <h3 style="color: #9d174d;">
+                    💻 Informatika
+                </h3>
+                <span class="act-badge" style="background-color: #fbcfe8;">TUSK INFINITE • ACT 4</span>
+            </div>
+            <p style="color: #1c1917; margin: 10px 0;">
+                Memahami dasar komputer, algoritma,
+                serta membuat halaman web dengan HTML dan CSS.
+            </p>
+            <div class="bar-track">
+                <div class="bar-fill" style="background-color: #ec4899; width: 90%;"></div>
+            </div>
+            <p style="font-size: 13px; font-weight: bold; color: #9d174d; margin: 0;">
+                Contoh penguasaan: 90%
+            </p>
+        </div>
+    </section>
+
+    <!-- Bagian Proyek -->
+    <!-- Bagian Proyek dan Karya Saya -->
+    <section id="stage-proyek" class="sbr-panel shadow-emerald">
+        <div style="text-align: center;">
+            <span class="stage-tag">3RD STAGE • RACE CHECKPOINTS</span>
+        </div>
+
+        <h2 class="section-title">
+            Proyek dan Karya Saya
+        </h2>
+
+        <p class="section-desc">
+            Berikut beberapa proyek dan karya yang saya
+            kerjakan selama belajar di SMA.
+        </p>
+
+        <!-- Jalur Rute Balapan SBR -->
+        <div class="race-trail">
+
+            <!-- Proyek 1 -->
+            <div class="checkpoint-card" style="border-left: 9px solid #0284c7;">
+                <div class="checkpoint-dot">★</div>
+                <p class="subject-pill" style="background-color: #0284c7; color: #ffffff;">
+                    INFORMATIKA
+                </p>
+
+                <h3>Website Portofolio Pribadi</h3>
+
+                <p style="line-height: 1.7; color: #1c1917;">
+                    Membuat website yang menampilkan profil,
+                    kemampuan akademik, dan karya pribadi
+                    menggunakan HTML dan CSS Inline.
+                </p>
+
+                <p style="font-size: 13px; font-weight: bold; color: #075985;">
+                    Kemampuan: HTML, CSS, desain web.
+                </p>
+
+                <a href="informatika.html"
+                   class="sbr-btn"
+                   style="
+                       background-color: #facc15;
+                       color: #000000;
+                       box-shadow: 4px 4px 0px #0284c7;
+                   ">
+                    ★ Lihat Proyek
+                </a>
+            </div>
+
+            <!-- Proyek 2 -->
+            <div class="checkpoint-card" style="border-left: 9px solid #10b981;">
+                <div class="checkpoint-dot">★</div>
+                <p class="subject-pill" style="background-color: #10b981; color: #000000;">
+                    SBK
+                </p>
+
+                <h3>Acara dan Praktek tampil</h3>
+
+                <p style="line-height: 1.7; color: #1c1917;">
+                    Mengikuti berbagai Kegiatan Seni Budaya seperti pentas seni, berakting,
+                  serta menampilkan karya monolog.
+                </p>
+
+                <p style="font-size: 13px; font-weight: bold; color: #065f46;">
+                    Kemampuan: praktek, akting, membuat karya.
+                </p>
+
+                <a href="sbk.html"
+                   class="sbr-btn"
+                   style="
+                       background-color: #a3e635;
+                       color: #000000;
+                       box-shadow: 4px 4px 0px #065f46;
+                   ">
+                    ★ Lihat Karya
+                </a>
+            </div>
+
+            <!-- Proyek 3 -->
+            <div class="checkpoint-card" style="border-left: 9px solid #ec4899;">
+                <div class="checkpoint-dot">★</div>
+                <p class="subject-pill" style="background-color: #ec4899; color: #ffffff;">
+                    KIMIA
+                </p>
+
+                <h3>Eksperimen dan uji coba</h3>
+
+                <p style="line-height: 1.7; color: #1c1917;">
+                    Mencoba berbagai eksperimen menarik untuk membuktikan teori teori
+                  yang ada.
+                </p>
+
+                <p style="font-size: 13px; font-weight: bold; color: #9d174d;">
+                    Kemampuan: pengamatan, ketelitian, analisis.
+                </p>
+
+                <a href="kimia.html"
+                   class="sbr-btn"
+                   style="
+                       background-color: #38bdf8;
+                       color: #000000;
+                       box-shadow: 4px 4px 0px #ec4899;
+                   ">
+                    ★ Lihat Proyek
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <!-- Bagian Hubungi Saya -->
+    <section id="stage-kontak" class="telegraph-panel">
+        <div class="sbr-badge-top" style="margin-bottom: 14px;">
+            ★ FINAL STAGE • 1890 TELEGRAPH DISPATCH ★
+        </div>
+
+        <h2 style="
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #facc15;
+            font-family: 'Arial Black', Impact, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0px #000000;
+        ">
+            Hubungi Saya
+        </h2>
+
+        <p style="
+            color: #bae6fd;
+            line-height: 1.7;
+            margin-bottom: 26px;
+            font-weight: bold;
+        ">
+            Terima kasih sudah mengunjungi portofolio saya.
+            Mari terhubung dan berbagi ide bersama!
+        </p>
+
+        <!-- Tombol WhatsApp -->
+        <a
+            href="https://wa.me/6287877704869"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-btn"
+            style="
+                background-color: #a3e635;
+                color: #000000;
+                box-shadow: 5px 5px 0px #000000;
+            "
+        >
+            💬 WhatsApp
+            <span class="contact-sub" style="color: #1a2e05;">
+                Chat langsung dengan saya
+            </span>
+        </a>
+
+        <!-- Tombol Instagram -->
+        <a
+            href="https://www.instagram.com/callme_axell/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-btn"
+            style="
+                background-color: #ec4899;
+                color: #ffffff;
+                box-shadow: 5px 5px 0px #facc15;
+            "
+        >
+            📸 Instagram
+            <span class="contact-sub" style="color: #fef08a;">
+                Lihat aktivitas dan karya saya
+            </span>
+        </a>
+
+        <!-- Tombol Email -->
+        <a
+            href="mailto:axel.reginaldi@gmail.com"
+            class="contact-btn"
+            style="
+                background-color: #38bdf8;
+                color: #000000;
+                box-shadow: 5px 5px 0px #000000;
+            "
+        >
+            ✉️ Email
+            <span class="contact-sub" style="color: #082f49;">
+                Kirim pesan melalui email
+            </span>
+        </a>
+
+        <p style="
+            color: #fde047;
+            font-size: 12px;
+            margin-top: 25px;
+            margin-bottom: 0;
+            font-weight: bold;
+        ">
+            © 2026 Axel Sectio Reginaldi | Portofolio Pribadi
+        </p>
+    </section>
+
+    <!-- Bagian Footer -->
+    <footer class="sbr-footer">
+        <p style="margin: 0;">
+            &copy; 2026 Axel Sectio Reginaldi. Dibuat dengan HTML dan CSS Inline.
+        </p>
+    </footer>
+
+    <!-- Script Gimmick Interaktif SBR -->
+    <script>
+        const sbrQuotes = [
+            "🟢 NYO-HO~! Lesson 1: Percaya pada Spin & kode yang bersih!",
+            "⭐ CHUMIMI~IN! Tusk Act 4 menembus batas bug HTML!",
+            "🐎 GO! GO! ZEPPELI! Menuju garis finis di New York!",
+            "🌀 LESSON 5: Jalan pintas tercepat adalah jalan memutar (belajar terus)!",
+            "✨ GOLDEN RATIO (1.618) TERCAPAI! Energi rotasi tak terbatas aktif!"
+        ];
+        let quoteIndex = 0;
+
+        function activateSpin() {
+            const ring = document.getElementById("goldenRing");
+            const text = document.getElementById("spinText");
+
+            ring.classList.add("hyper-spin");
+            text.textContent = sbrQuotes[quoteIndex];
+            quoteIndex = (quoteIndex + 1) % sbrQuotes.length;
+
+            setTimeout(() => {
+                ring.classList.remove("hyper-spin");
+            }, 1400);
+        }
+    </script>
+
+</body>
+</html>

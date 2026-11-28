@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kumpulan proyek dan praktikum Kimia saya.">
+  <title>Proyek Kimia Saya</title>
+  <link rel="stylesheet" href="style-kimia.css">
+</head>
+<body>
+  <!-- Ticker Morioh-cho Radio 1999 -->
+  <div class="morioh-ticker">
+    📻 MORI-MORI-MORI-MORIOH-CHO RADIO • PART 4: DIAMOND IS UNBREAKABLE • CHEMISTRY LAB 💎
+  </div>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html">💎 Portofolio Saya</a>
+      <a class="back-link" href="index.html">← Kembali ke Portofolio</a>
+    </nav>
+    <div class="hero">
+      <span class="eyebrow">PORTOFOLIO PELAJAR • KIMIA</span>
+      <h1>Proyek &amp; Praktikum Kimia</h1>
+      <p>Berikut beberapa eksperimen, laporan praktikum, dan proyek Kimia yang saya kerjakan selama belajar di BoaAsh Excellent.</p>
+
+      <!-- Gimmick 1: Pemutusan & Restorasi Ikatan Crazy Diamond -->
+      <div class="crazy-wrapper">
+        <button type="button" id="crazyBtn" class="jojo4-btn btn-hair" onclick="toggleCrazyBond()">
+          💇‍♂️ HINA RAMBUT JOSUKE (Putus Ikatan!)
+        </button>
+        <div id="crazyStatus" class="crazy-status">
+          💎 Klik tombol di atas untuk menguji reaksi Crazy Diamond! 💎
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <div class="morioh-crest">★ MORIOH-CHO 1999 • CHEMICAL STAND ARCHIVE ★</div>
+      <h2>Eksplorasi Reaksi dan Materi</h2>
+      <p>Setiap percobaan menjadi kesempatan untuk memahami perubahan zat, ikatan kimia, dan penerapannya dalam kehidupan sehari-hari.</p>
+
+      <!-- Gimmick 2: Morioh-cho Radio & Heaven's Door Quote Reader -->
+      <div class="radio-box">
+        <button type="button" class="jojo4-btn btn-diamond" onclick="tuneMoriohRadio()">
+          📻 PUTAR MORIOH-CHO RADIO (Quotes Part 4)
+        </button>
+        <p id="radioOutput" class="radio-output">
+          "Greato Daze... Pilih salah satu laporan proyek Kimia di bawah ini!"
+        </p>
+      </div>
+    </section>
+
+    <section class="project-grid" aria-label="Daftar proyek Kimia">
+
+      <!-- ====================================================
+           SUB-PROYEK KIMIA 1 (EDIT JUDUL, DESKRIPSI & TAG DI SINI)
+           ==================================================== -->
+      <article class="project-card" onclick="diamondShine(this)">
+        <div class="stand-header">
+          <span>💎 CRAZY DIAMOND • LAB 01</span>
+          <span class="badge-1999">1999</span>
+        </div>
+        <div class="project-visual visual-pink"><span>🧪</span></div>
+        <div class="project-content">
+          <span class="category">REAKSI</span>
+          <h3>Membuat Es krim</h3>
+          <p>Munguji sifat Koligatif larutan</p>
+          <div class="tags">
+            <span>Praktikum</span>
+            <span>Kimia</span>
+          </div>
+          <a class="project-link" href="kimia-karya1.html">Lihat detail proyek ↗</a>
+        </div>
+      </article>
+
+      <!-- ====================================================
+           SUB-PROYEK KIMIA 2 (EDIT JUDUL, DESKRIPSI & TAG DI SINI)
+           ==================================================== -->
+      <article class="project-card" onclick="diamondShine(this)">
+        <div class="stand-header">
+          <span>💣 KILLER QUEEN • LAB 02</span>
+          <span class="badge-1999">1999</span>
+        </div>
+        <div class="project-visual visual-gold"><span>⚗️</span></div>
+        <div class="project-content">
+          <span class="category">Analisis</span>
+          <h3>Praktikum Polimer Superabsorben</h3>
+          <p>Percobaan sederhana untuk menguji materi Makromolekul-Polimer</p>
+          <div class="tags">
+            <span>Eksperimen</span>
+            <span>Kimia</span>
+          </div>
+          <a class="project-link" href="kimia-karya2.html">Lihat detail proyek ↗</a>
+        </div>
+      </article>
+
+      <!-- ====================================================
+           SUB-PROYEK KIMIA 3 (EDIT JUDUL, DESKRIPSI & TAG DI SINI)
+           ==================================================== -->
+      <article class="project-card" onclick="diamondShine(this)">
+        <div class="stand-header">
+          <span>📖 HEAVEN'S DOOR • LAB 03</span>
+          <span class="badge-1999">1999</span>
+        </div>
+        <div class="project-visual visual-mint"><span>🔬</span></div>
+        <div class="project-content">
+          <span class="category">ANALISIS</span>
+          <h3>Experimen Fire Hand</h3>
+          <p>Menguji perpindahan api melalui telapak tangan tanpa melukai kulit</p>
+          <div class="tags">
+            <span>Analisis</span>
+            <span>Kimia</span>
+          </div>
+          <a class="project-link" href="kimia-karya3.html">Lihat detail proyek ↗</a>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="note">
+      <div class="greato-tag">💎 GREATO DAZE • DIAMOND IS UNBREAKABLE 💎</div>
+      <h2>Terus Bereksperimen, Terus Menemukan</h2>
+      <p>Proyek-proyek Kimia ini adalah bagian dari proses belajar saya memahami cara kerja unsur dan reaksi di alam semesta.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Axel Sectio Reginaldi · Dibuat dengan HTML dan CSS</p>
+    <a href="index.html">Kembali ke halaman utama ↑</a>
+  </footer>
+
+  <!-- Script Gimmick JoJo Part 4: Diamond is Unbreakable -->
+  <script>
+    let bondBroken = false;
+
+    function toggleCrazyBond() {
+      bondBroken = !bondBroken;
+      const body = document.body;
+      const btn = document.getElementById("crazyBtn");
+      const status = document.getElementById("crazyStatus");
+
+      if (bondBroken) {
+        body.classList.add("broken-bond");
+        body.classList.remove("restored-diamond");
+        btn.textContent = "💎 CRAZY DIAMOND: DORARARA! (Pulihkan!)";
+        btn.className = "jojo4-btn btn-restore";
+        status.textContent = "💢 APA KAU BILANG TENTANG RAMBUTKU?! Ikatan kartu terpecah!";
+      } else {
+        body.classList.remove("broken-bond");
+        body.classList.add("restored-diamond");
+        btn.textContent = "💇‍♂️ HINA RAMBUT JOSUKE (Putus Ikatan!)";
+        btn.className = "jojo4-btn btn-hair";
+        status.textContent = "💎 DORARARARA! Crazy Diamond menyusun ulang ikatan lebih kuat!";
+        setTimeout(() => {
+          body.classList.remove("restored-diamond");
+        }, 1200);
+      }
+    }
+
+    const moriohQuotes = [
+      "💎 GREATO DAZE! Crazy Diamond menyusun kembali molekul hingga sempurna!",
+      "✋ ZA HANDO! Okuyasu menghapus semua kesalahan perhitungan mol!",
+      "📖 HEAVEN'S DOOR! Rohan membaca seluruh rumus reaksi kimia dalam sekejap!",
+      "💣 KILLER QUEEN! Reaksi eksoterm melepaskan energi panas yang luar biasa!",
+      "📻 Good morning Morioh-cho! Semangat praktikum Kimia hari ini!"
+    ];
+    let radioIdx = 0;
+
+    function tuneMoriohRadio() {
+      const output = document.getElementById("radioOutput");
+      output.textContent = moriohQuotes[radioIdx];
+      radioIdx = (radioIdx + 1) % moriohQuotes.length;
+    }
+
+    /** @param {HTMLElement} card */
+    function diamondShine(card) {
+      card.classList.add("diamond-pulse");
+      setTimeout(() => {
+        card.classList.remove("diamond-pulse");
+      }, 600);
+    }
+  </script>
+</body>
+</html>

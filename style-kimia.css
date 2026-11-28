@@ -1,0 +1,497 @@
+/* =========================================================
+   CSS EKSTERNAL - HALAMAN PROYEK KIMIA
+   TEMA: JOJO PART 4 (DIAMOND IS UNBREAKABLE / MORIOH 1999)
+   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e1b4b;
+  /* Latar belakang pop-art Morioh 1999: Kuning cerah + langit violet senja */
+  background-color: #fef08a;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(236, 72, 153, 0.22) 0%, transparent 42%),
+    radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.25) 0%, transparent 45%),
+    radial-gradient(#a855f7 1.3px, transparent 1.3px),
+    radial-gradient(#ec4899 1.3px, #fef9c3 1.3px);
+  background-size: 100% 100%, 100% 100%, 34px 34px, 34px 34px;
+  background-position: 0 0, 0 0, 0 0, 17px 17px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+/* EFEK GIMMICK 1A: IKATAN PECAH (RAMBUT JOSUKE DIHINA) */
+body.broken-bond {
+  background-color: #3b0764;
+  background-image: radial-gradient(#ec4899 1.5px, #2e0249 1.5px);
+}
+
+body.broken-bond .project-card:nth-child(1) {
+  transform: rotate(-3.5deg) translateY(8px);
+  border-color: #ef4444;
+}
+
+body.broken-bond .project-card:nth-child(2) {
+  transform: rotate(3deg) translateY(-6px);
+  border-color: #ef4444;
+}
+
+body.broken-bond .project-card:nth-child(3) {
+  transform: rotate(-2.5deg) translateY(10px);
+  border-color: #ef4444;
+}
+
+/* EFEK GIMMICK 1B: RESTORASI BERLIAN CRAZY DIAMOND */
+body.restored-diamond .project-card {
+  box-shadow: 0 0 28px #38bdf8, 0 0 45px #ec4899, 8px 8px 0px #000000 !important;
+}
+
+/* TICKER MORIOH-CHO RADIO */
+.morioh-ticker {
+  background-color: #311042;
+  color: #fef08a;
+  border-bottom: 3px solid #000000;
+  text-align: center;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+/* HEADER & NAVBAR ALA JOSUKE HIGASHIKATA */
+.site-header {
+  background: linear-gradient(135deg, #311042 0%, #581c87 52%, #db2777 100%);
+  color: #fef08a;
+  padding: 0 7%;
+  border-bottom: 6px solid #000000;
+  box-shadow: 0 8px 0px #38bdf8;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  color: #fef08a;
+  text-decoration: none;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.back-link {
+  background-color: #38bdf8;
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 8px 14px;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #fef08a;
+  text-transform: uppercase;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.back-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #ec4899;
+}
+
+/* HERO SECTION */
+.hero {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  padding: 48px 15px 60px;
+}
+
+.eyebrow {
+  display: inline-block;
+  background-color: #fef08a;
+  color: #311042;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #38bdf8;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  margin: 0 0 14px;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow:
+    3px 3px 0px #000000,
+    -2px -2px 0px #ec4899,
+    5px 5px 0px #38bdf8;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #fef9c3;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* TOMBOL GIMMICK PART 4 */
+.crazy-wrapper {
+  margin-top: 24px;
+}
+
+.jojo4-btn {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 11px 20px;
+  border: 3px solid #000000;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.jojo4-btn:active {
+  transform: translate(2px, 2px);
+}
+
+.btn-hair {
+  background: linear-gradient(90deg, #f43f5e, #ec4899);
+  color: #ffffff;
+  box-shadow: 4px 4px 0px #fef08a;
+}
+
+.btn-restore {
+  background: linear-gradient(90deg, #38bdf8, #f472b6);
+  color: #000000;
+  box-shadow: 4px 4px 0px #fef08a;
+}
+
+.btn-diamond {
+  background: linear-gradient(90deg, #311042, #6b21a8);
+  color: #fef08a;
+  box-shadow: 4px 4px 0px #ec4899;
+}
+
+.crazy-status {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 900;
+  color: #fef08a;
+  letter-spacing: 1px;
+}
+
+/* CONTAINER & INTRO PANEL */
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  box-shadow: 8px 8px 0px #581c87;
+  padding: 30px 20px;
+  margin: 36px 0 28px;
+}
+
+.morioh-crest {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border: 2px solid #000000;
+  margin-bottom: 12px;
+}
+
+.intro h2 {
+  margin: 0 0 10px;
+  color: #311042;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 0px #fef08a;
+}
+
+.intro p {
+  max-width: 650px;
+  margin: auto;
+  color: #3b0764;
+  font-weight: bold;
+}
+
+.radio-box {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 3px dashed #ec4899;
+}
+
+.radio-output {
+  margin-top: 12px !important;
+  color: #be185d !important;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* PROJECT GRID - 3 KARTU MORIOH LAB */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 15px 0 48px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 8px 8px 0px #ec4899;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translate(-3px, -4px);
+  box-shadow: 11px 11px 0px #38bdf8;
+}
+
+.project-card.diamond-pulse {
+  box-shadow: 0 0 26px #38bdf8, 0 0 44px #ec4899;
+  transform: scale(1.02);
+}
+
+/* HEADER STAND PART 4 */
+.stand-header {
+  background-color: #311042;
+  color: #fef08a;
+  border-bottom: 3px solid #000000;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.badge-1999 {
+  background-color: #ec4899;
+  color: #ffffff;
+  padding: 2px 7px;
+  border: 2px solid #000000;
+  font-size: 10px;
+}
+
+/* BANNER VISUAL KARYA KIMIA */
+.project-visual {
+  min-height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px solid #000000;
+}
+
+.project-visual span {
+  font-size: 56px;
+  filter: drop-shadow(3px 3px 0px #000000);
+}
+
+.visual-pink {
+  background: linear-gradient(135deg, #f472b6, #38bdf8);
+}
+.visual-gold {
+  background: linear-gradient(135deg, #facc15, #a855f7);
+}
+.visual-mint {
+  background: linear-gradient(135deg, #34d399, #fde047);
+}
+
+/* KONTEN DALAM KARTU */
+.project-content {
+  padding: 20px;
+  background-color: #ffffff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  align-self: flex-start;
+  background-color: #fef08a;
+  color: #311042;
+  border: 2px solid #000000;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.project-content h3 {
+  margin: 12px 0 8px;
+  color: #311042;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.project-content p {
+  color: #334155;
+  font-size: 14px;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.tags span {
+  background: #fdf2f8;
+  color: #9d174d;
+  border: 2px solid #000000;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.project-link {
+  align-self: flex-start;
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #000000;
+  padding: 10px 15px;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #311042;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.project-link:hover {
+  background-color: #ec4899;
+  color: #ffffff;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #fef08a;
+}
+
+/* CATATAN PENUTUP */
+.note {
+  background: linear-gradient(135deg, #311042 0%, #581c87 100%);
+  border: 4px solid #000000;
+  box-shadow: 8px 8px 0px #38bdf8;
+  padding: 30px 22px;
+  text-align: center;
+  margin: 5px 0 48px;
+}
+
+.greato-tag {
+  display: inline-block;
+  background-color: #fef08a;
+  color: #000000;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #ec4899;
+  margin-bottom: 12px;
+}
+
+.note h2 {
+  margin: 0 0 10px;
+  color: #fef08a;
+  font-family: 'Arial Black', Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.note p {
+  color: #f3e8ff;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* FOOTER */
+.footer {
+  background: #1e0929;
+  color: #fef08a;
+  border-top: 5px solid #000000;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.footer p {
+  margin: 0 0 10px;
+}
+
+.footer a {
+  color: #38bdf8;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer a:hover {
+  color: #ec4899;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE HP (ACODE MOBILE) */
+@media (max-width: 780px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 650px) {
+  .site-header { padding: 0 5%; }
+  .navbar { min-height: 68px; flex-wrap: wrap; padding: 10px 0; }
+  .brand { font-size: 16px; }
+  .back-link { font-size: 11px; padding: 6px 10px; }
+  .hero { padding: 38px 5px 48px; }
+  .hero p { font-size: 14px; }
+  .container { width: 90%; }
+  .project-visual { min-height: 125px; }
+  .intro { padding: 24px 15px; margin-top: 28px; }
+}

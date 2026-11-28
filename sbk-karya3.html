@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karya SBK 3 - Portofolio</title>
+  <link rel="stylesheet" href="style-sbk-detail.css">
+</head>
+<body>
+  <div class="passione-ticker">
+    ✈️ PART 5: GOLDEN WIND • VENTO AUREO FINALE • KARYA 03 ✈️
+  </div>
+
+  <nav class="gw-navbar">
+    <a href="sbk.html" class="gw-nav-btn nav-back">← Kembali ke Daftar SBK</a>
+    <a href="index.html" class="gw-nav-btn nav-home">★ Portofolio Utama</a>
+  </nav>
+
+  <main class="gw-container">
+    <article class="art-sheet">
+      <!-- 1. JUDUL SUB KARYA -->
+      <header class="art-header">
+        <span class="gang-badge" style="background: linear-gradient(90deg, #9333ea, #c026d3);">✈️ VENTO AUREO • KARYA SBK 03</span>
+        <h1>Karya Seni</h1>
+        <div class="art-meta">
+          <span>Mapel: SBK</span>
+          <span>Kategori: Karya Seni Rupa</span>
+          <span>Tahun: 2024</span>
+        </div>
+      </header>
+
+      <!-- GIMMICK INTERAKTIF PART 5 -->
+      <div class="gimmick-bar">
+        <button type="button" class="gw-btn btn-giorno" onclick="toggleRequiem()">
+          ✨ GOLD EXPERIENCE REQUIEM
+        </button>
+        <button type="button" class="gw-btn btn-piano" onclick="playVentoQuote()">
+          ✈️ VOLARE VIA! (Quotes)
+        </button>
+      </div>
+      <div id="gwQuote" class="quote-banner">
+        "Volare Via! Terbang tinggi lewat ekspresi seni dan budaya!"
+      </div>
+
+      <!-- 2. FOTO DOKUMENTASI PERTAMA -->
+      <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>📸 DOKUMENTASI 01 • HASIL KARYA</span>
+          <span>VOLARE VIA!</span>
+        </div>
+        <img
+          src="images/ss3.jpg"
+          alt="Dokumentasi 1 Karya SBK 3"
+          onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22450%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%233b0764%22/><text x=%2250%25%22 y=%2248%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23facc15%22 font-family=%22Arial%22 font-size=%2224%22 font-weight=%22bold%22>📸 TEMPAT FOTO DOKUMENTASI 1</text><text x=%2250%25%22 y=%2258%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23e879f9%22 font-family=%22Arial%22 font-size=%2216%22>(Masukkan foto ke folder images/sbk3-foto1.jpg)</text></svg>'"
+        >
+        <figcaption class="photo-caption">
+          Hasil karya Seni Rupa
+        </figcaption>
+      </figure>
+
+      <!-- 3. SPACE PENJELASAN TENTANG KEGIATAN / KARYA -->
+      <section class="story-box" style="border-left-color: #9333ea;">
+        <h2 style="color: #581c87;">✈️ Penjelasan Karya &amp; Kegiatan</h2>
+        <p>
+          Menggambar karya Seni Rupa berupa pemandangan gurun pasir pada kanvas sebagai media dan menggunakan krayon sebagai alat gambarnya saat dikelas 10.
+          Menggunakan teknik Arsir dan Bloking pada karya.
+        </p>
+    
+      </section>
+
+      <!-- GIMMICK STICKY FINGERS ZIPPER -->
+      <div class="zipper-section">
+        <div class="zipper-track"></div>
+        <button type="button" id="zipperBtn" class="zipper-btn" onclick="toggleZipper()">
+          🤐 STICKY FINGERS: BUKA CATATAN SINGKAT
+        </button>
+        <div id="zipperBox" class="zipper-content">
+          <strong>📌 Catatan Tambahan:</strong> Hasilnya tidak memuaskan sama sekali:(
+        </div>
+      </div>
+
+      <!-- 4. FOTO DOKUMENTASI KEDUA -->
+            <!-- BLOK VIDEO DOKUMENTASI LOOPING (PENGGANTI FOTO 1 ATAU 2) -->
+      <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>🎬 DOKUMENTASI VIDEO • LIVE REPLAY</span>
+          <span>MOODY BLUES!</span>
+        </div>
+
+        <!-- Ganti src dengan nama file MP4 kamu di dalam folder images -->
+        <video
+          src="images/vid3.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          style="
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+            border: 3px solid #000000;
+            background-color: #16071c;
+          "
+        >
+          Browser kamu tidak mendukung pemutaran video MP4.
+        </video>
+
+        <figcaption class="photo-caption">
+          Dokumentasi pembuatan karya
+        </figcaption>
+      </figure>
+
+
+      <!-- NAVIGASI ANTAR KARYA SBK -->
+      <nav class="sub-nav" aria-label="Navigasi Karya SBK">
+        <div class="sub-nav-title">★ Jelajahi Karya SBK Lainnya ★</div>
+        <div class="sub-nav-links">
+          <a href="sbk-karya1.html">🐞 Karya 1</a>
+          <a href="sbk-karya2.html">🤐 Karya 2</a>
+          <a href="sbk-karya3.html" class="active-karya">✈️ Karya 3</a>
+        </div>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="gw-footer">
+    <p style="margin: 0 0 8px;">© 2026 Axel Sectio Reginaldi · Golden Wind SBK Edition</p>
+    <a href="sbk.html">← Kembali ke Proyek SBK</a>
+  </footer>
+
+  <script>
+    function toggleRequiem() {
+      document.body.classList.toggle("requiem-mode");
+      const q = document.getElementById("gwQuote");
+      q.textContent = document.body.classList.contains("requiem-mode")
+        ? "✨ GOLD EXPERIENCE REQUIEM! Aura keemasan memancarkan energi pada karya ini!"
+        : "✈️ Mode normal aktif. Klik lagi kapan saja!";
+    }
+
+    const ventoQuotes = [
+      "✈️ VOLARE VIA! Ide-ide kreatif melesat tinggi tanpa batas!",
+      "⏪ MOODY BLUES! Memutar ulang proses belajar hingga menjadi karya nyata!",
+      "🇮🇹 GRAZIE! Terima kasih sudah mengapresiasi karya seni ini!",
+      "🐞 GOLDEN WIND! Menutup rangkaian proyek SBK dengan hasil terbaik!"
+    ];
+    let vIdx = 0;
+    function playVentoQuote() {
+      document.getElementById("gwQuote").textContent = ventoQuotes[vIdx];
+      vIdx = (vIdx + 1) % ventoQuotes.length;
+    }
+
+    function toggleZipper() {
+      const box = document.getElementById("zipperBox");
+      const btn = document.getElementById("zipperBtn");
+      box.classList.toggle("open");
+      btn.textContent = box.classList.contains("open")
+        ? "🤐 ARI ARI ARI! TUTUP RESLETING"
+        : "🤐 STICKY FINGERS: BUKA CATATAN SINGKAT";
+    }
+
+    /** @param {HTMLElement} frame */
+    function togglePhotoZoom(frame) {
+      frame.classList.toggle("zoomed");
+    }
+  </script>
+</body>
+</html>

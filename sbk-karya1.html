@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karya SBK 1 - Portofolio</title>
+  <link rel="stylesheet" href="style-sbk-detail.css">
+</head>
+<body>
+  <div class="passione-ticker">
+    🐞 PART 5: GOLDEN WIND • PASSIONE ART GALLERY • KARYA 01 🐞
+  </div>
+
+  <nav class="gw-navbar">
+    <a href="sbk.html" class="gw-nav-btn nav-back">← Kembali ke Daftar SBK</a>
+    <a href="index.html" class="gw-nav-btn nav-home">★ Portofolio Utama</a>
+  </nav>
+
+  <main class="gw-container">
+    <article class="art-sheet">
+      <!-- 1. JUDUL SUB KARYA -->
+      <header class="art-header">
+        <span class="gang-badge">🐞 GOLD EXPERIENCE • KARYA SBK 01</span>
+        <h1>Penelitian Tindakan Kelas (PTK)</h1>
+        <div class="art-meta">
+          <span>Mapel: SBK</span>
+          <span>Kategori: Keterampilan</span>
+          <span>Tahun: 2025</span>
+        </div>
+      </header>
+
+      <!-- GIMMICK INTERAKTIF PART 5 -->
+      <div class="gimmick-bar">
+        <button type="button" class="gw-btn btn-giorno" onclick="toggleRequiem()">
+          🐞 GOLD EXPERIENCE REQUIEM
+        </button>
+        <button type="button" class="gw-btn btn-piano" onclick="playVentoQuote()">
+          🎹 IL VENTO D'ORO (3:45)
+        </button>
+      </div>
+      <div id="gwQuote" class="quote-banner">
+        "Kono Axel ni wa yume ga aru... Klik foto untuk memperbesar dokumentasi!"
+      </div>
+
+      <!-- 2. FOTO DOKUMENTASI PERTAMA (DI BAWAH JUDUL) -->
+      <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>📸 DOKUMENTASI 01 • HASIL KARYA</span>
+          <span>DI MOLTO!</span>
+        </div>
+        <!-- Ganti src dengan nama file fotomu di folder images, contoh: images/sbk1-atas.jpg -->
+        <img
+          src="images/ss1.jpg"
+          alt="Dokumentasi 1 Karya SBK 1"
+          onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22450%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%232e0249%22/><text x=%2250%25%22 y=%2248%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23facc15%22 font-family=%22Arial%22 font-size=%2224%22 font-weight=%22bold%22>📸 TEMPAT FOTO DOKUMENTASI 1</text><text x=%2250%25%22 y=%2258%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23f472b6%22 font-family=%22Arial%22 font-size=%2216%22>(Masukkan foto ke folder images/sbk1-foto1.jpg)</text></svg>'"
+        >
+        <figcaption class="photo-caption">
+          Penampilan "Elizabeth and The Pirates Escape" bersama 11 ICC 03
+        </figcaption>
+      </figure>
+
+      <!-- 3. SPACE PENJELASAN TENTANG KEGIATAN / KARYA -->
+      <section class="story-box">
+        <h2>🐞 Penjelasan Karya &amp; Kegiatan</h2>
+        <p>
+          Melaksanakan pentas PTK yang berlangsung pada 17 Desember 2025 sebagai sarana untuk pembelajaran serta hiburan
+          saat kelas 11. Berperan sebagai "Tiny" yang menampilkan pertunjukan teatrikal musikal yang menggunakan tema bajak laut dengan genre aksi & petualangan.
+        </p>
+        <p>
+          Pertunjukan ini terinspirasi dari film "Pirates of the Caribbean"
+        </p>
+      </section>
+
+      <!-- GIMMICK STICKY FINGERS ZIPPER (OPSIONAL CATATAN TAMBAHAN) -->
+      <div class="zipper-section">
+        <div class="zipper-track"></div>
+        <button type="button" id="zipperBtn" class="zipper-btn" onclick="toggleZipper()">
+          🤐 STICKY FINGERS: BUKA CATATAN SINGKAT
+        </button>
+        <div id="zipperBox" class="zipper-content">
+          <strong>📌 Catatan Tambahan:</strong> Pertunjukan pentas seni dalam rangka besar yang pertama dan terakhir semasa SMA, lelah namun sangat menyenangkan!
+        </div>
+      </div>
+
+      <!-- 4. FOTO DOKUMENTASI KEDUA (DI BAGIAN BAWAH) -->
+            <!-- BLOK VIDEO DOKUMENTASI LOOPING (PENGGANTI FOTO 1 ATAU 2) -->
+      <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>🎬 DOKUMENTASI VIDEO • LIVE REPLAY</span>
+          <span>MOODY BLUES!</span>
+        </div>
+
+        <!-- Ganti src dengan nama file MP4 kamu di dalam folder images -->
+        <video
+          src="images/vid1.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          style="
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+            border: 3px solid #000000;
+            background-color: #16071c;
+          "
+        >
+          Browser kamu tidak mendukung pemutaran video MP4.
+        </video>
+
+        <figcaption class="photo-caption">
+          Cuplikan adegan pertarungan. (Axel yang sedang berpose diawal)
+        </figcaption>
+      </figure>
+
+
+      <!-- NAVIGASI PINDAH KARYA SBK -->
+      <nav class="sub-nav" aria-label="Navigasi Karya SBK">
+        <div class="sub-nav-title">★ Jelajahi Karya SBK Lainnya ★</div>
+        <div class="sub-nav-links">
+          <a href="sbk-karya1.html" class="active-karya">🐞 Karya 1</a>
+          <a href="sbk-karya2.html">🤐 Karya 2</a>
+          <a href="sbk-karya3.html">✈️ Karya 3</a>
+        </div>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="gw-footer">
+    <p style="margin: 0 0 8px;">© 2026 Axel Sectio Reginaldi · Golden Wind SBK Edition</p>
+    <a href="sbk.html">← Kembali ke Proyek SBK</a>
+  </footer>
+
+  <script>
+    function toggleRequiem() {
+      document.body.classList.toggle("requiem-mode");
+      const q = document.getElementById("gwQuote");
+      if (document.body.classList.contains("requiem-mode")) {
+        q.textContent = "✨ GOLD EXPERIENCE REQUIEM! Aura keemasan memancarkan energi kehidupan pada karya ini!";
+      } else {
+        q.textContent = "🐞 Aura kembali normal. Klik lagi kapan saja untuk mode Requiem!";
+      }
+    }
+
+    const ventoQuotes = [
+      "🎹 *Piano Giorno mulai berbunyi* — Karya ini dibuat dengan tekad (Resolve) penuh!",
+      "🐞 GOLD EXPERIENCE! Memberi kehidupan dan makna pada setiap goresan seni!",
+      "🇮🇹 DI MOLTO! Perpaduan warna dan komposisi yang sangat berkelas!",
+      "👊 MUDA MUDA MUDA! Tidak ada rasa malas yang bisa menghentikan kreativitas!"
+    ];
+    let vIdx = 0;
+    function playVentoQuote() {
+      document.getElementById("gwQuote").textContent = ventoQuotes[vIdx];
+      vIdx = (vIdx + 1) % ventoQuotes.length;
+    }
+
+    function toggleZipper() {
+      const box = document.getElementById("zipperBox");
+      const btn = document.getElementById("zipperBtn");
+      box.classList.toggle("open");
+      btn.textContent = box.classList.contains("open")
+        ? "🤐 ARI ARI ARI! TUTUP RESLETING"
+        : "🤐 STICKY FINGERS: BUKA CATATAN SINGKAT";
+    }
+
+    /** @param {HTMLElement} frame */
+    function togglePhotoZoom(frame) {
+      frame.classList.toggle("zoomed");
+    }
+  </script>
+</body>
+</html>

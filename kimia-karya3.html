@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek Kimia 3 - Portofolio</title>
+  <link rel="stylesheet" href="style-kimia-detail.css">
+</head>
+<body>
+  <div class="hamon-ticker">
+    🫧 PART 2 FINALE: CAESAR ZEPPELI &amp; RED STONE OF AJA • PROYEK 03 🫧
+  </div>
+
+  <nav class="hm-navbar">
+    <a href="kimia.html" class="hm-nav-btn nav-back">← Kembali ke Daftar Kimia</a>
+    <a href="index.html" class="hm-nav-btn nav-home">★ Portofolio Utama</a>
+  </nav>
+
+  <main class="hm-container">
+    <article class="lab-sheet">
+      <!-- 1. JUDUL SUB PROYEK KIMIA -->
+      <header class="lab-header">
+        <span class="hamon-badge" style="background: linear-gradient(90deg, #be123c, #e11d48); color: #ffffff;">🫧 CAESAR ZEPPELI • PROYEK KIMIA 03</span>
+        <h1>Eksperimen Fire Hand</h1>
+        <div class="lab-meta">
+          <span>Mapel: Kimia</span>
+          <span>Kategori: Eksperimen</span>
+          <span>Tahun: 2025</span>
+        </div>
+      </header>
+
+      <!-- GIMMICK INTERAKTIF PART 1 & 2 -->
+      <div class="gimmick-bar">
+        <button type="button" class="hm-btn btn-sunlight" onclick="toggleHamon()">
+          ☀️ HAMON BUBBLE CUTTER!
+        </button>
+        <button type="button" class="hm-btn btn-predict" onclick="nextYouWillSay()">
+          🫧 ZEPPELI SPIRIT (Quotes)
+        </button>
+      </div>
+      <div id="hmQuote" class="prediction-banner">
+        "Gelembung sabun + energi Hamon = ikatan molekul yang memantulkan cahaya!"
+      </div>
+
+      <!-- 2. FOTO DOKUMENTASI UTAMA (1 FOTO SAJA) -->
+      <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>📸 DOKUMENTASI UTAMA • HASIL PERCOBAAN</span>
+          <span>BUBBLE LAUNCHER!</span>
+        </div>
+        <img
+          src="images/ss6.jpg"
+          alt="Dokumentasi Proyek Kimia 3"
+          onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22450%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%234c0519%22/><text x=%2250%25%22 y=%2248%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23facc15%22 font-family=%22Arial%22 font-size=%2224%22 font-weight=%22bold%22>🧪 TEMPAT FOTO DOKUMENTASI UTAMA</text><text x=%2250%25%22 y=%2258%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23fda4af%22 font-family=%22Arial%22 font-size=%2216%22>(Masukkan foto ke folder images/kimia3-foto1.jpg)</text></svg>'"
+        >
+        <figcaption class="photo-caption">
+          Fire Hand🔥
+        </figcaption>
+      </figure>
+
+      <!-- 3. SPACE PENJELASAN KEGIATAN / PRAKTIKUM -->
+      <section class="story-box" style="border-left-color: #e11d48;">
+        <h2 style="color: #9f1239;">🫧 Penjelasan Praktikum &amp; Kegiatan</h2>
+        <p>
+          Demonstrasi kimia yang membakar gas mudah terbakar di dalam gelembung air sabun di atas telapak tangan kita tanpa melukai kulit.
+          Menjelaskan konsep reaksi pembakaran hidrokarbon, koloid, dan perpindahan kalor
+        </p>
+        <p>
+          Sangat aman dan menyenangkan
+        </p>
+      </section>
+
+      <!-- GIMMICK RED STONE OF AJA -->
+      <div class="aja-section">
+        <button type="button" id="ajaBtn" class="aja-btn" onclick="toggleAja()">
+          💎 RED STONE OF AJA: BUKA KESIMPULAN SINGKAT
+        </button>
+        <div id="ajaBox" class="aja-content">
+          <strong>📌 Alat &amp; Bahan:</strong> Baskom/ember, air, sabun cuci piring cair, tabung gas portabel (butana), dan korek api pemantik panjang.
+        </div>
+      </div>
+
+      <!-- 4. PENGGANTI FOTO 2: INTERACTIVE HAMON BUBBLE CHAMBER (SHABON LAUNCHER) -->
+      <section style="
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 55%, #4c0519 100%);
+        border: 4px solid #000000;
+        box-shadow: 7px 7px 0px #e11d48;
+        padding: 16px;
+        margin: 26px 0 10px;
+        color: #ffffff;
+        text-align: center;
+      ">
+        <div class="photo-label" style="margin-bottom: 14px;">
+          <span>🫧 SHABON LAUNCHER • REACTION CHAMBER</span>
+          <span>TAP BUBBLES!</span>
+        </div>
+
+        <p style="font-size: 13px; color: #bae6fd; font-weight: bold; margin: 0 0 16px;">
+          Ketuk ketiga gelembung Hamon di bawah untuk menguji kestabilan reaksi kimia!
+        </p>
+
+        <!-- 3 Gelembung Interaktif -->
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-bottom: 16px;">
+          <button
+            type="button"
+            onclick="chargeBubble(this, '🔬 OBSERVASI VALID: Data pengamatan tercatat 100% akurat!')"
+            style="
+              width: 96px;
+              height: 96px;
+              border-radius: 50%;
+              border: 3px solid #38bdf8;
+              background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.45), rgba(14,165,233,0.25) 60%, rgba(2,132,199,0.5) 100%);
+              color: #ffffff;
+              font-family: 'Arial Black', Impact, sans-serif;
+              font-size: 11px;
+              cursor: pointer;
+              box-shadow: 0 0 15px rgba(56, 189, 248, 0.5), inset 0 0 10px rgba(255,255,255,0.4);
+              transition: transform 0.2s ease, all 0.25s ease;
+            "
+          >
+            🫧<br>OBSERVASI
+          </button>
+
+          <button
+            type="button"
+            onclick="chargeBubble(this, '⚗️ REAKSI STABIL: Ikatan unsur menyatu dengan energi Hamon!')"
+            style="
+              width: 96px;
+              height: 96px;
+              border-radius: 50%;
+              border: 3px solid #34d399;
+              background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.45), rgba(16,185,129,0.25) 60%, rgba(5,150,105,0.5) 100%);
+              color: #ffffff;
+              font-family: 'Arial Black', Impact, sans-serif;
+              font-size: 11px;
+              cursor: pointer;
+              box-shadow: 0 0 15px rgba(52, 211, 153, 0.5), inset 0 0 10px rgba(255,255,255,0.4);
+              transition: transform 0.2s ease, all 0.25s ease;
+            "
+          >
+            🫧<br>REAKSI
+          </button>
+
+          <button
+            type="button"
+            onclick="chargeBubble(this, '💎 RED STONE POWER: Analisis selesai dengan hasil sempurna!')"
+            style="
+              width: 96px;
+              height: 96px;
+              border-radius: 50%;
+              border: 3px solid #f43f5e;
+              background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.45), rgba(244,63,94,0.25) 60%, rgba(190,18,60,0.5) 100%);
+              color: #ffffff;
+              font-family: 'Arial Black', Impact, sans-serif;
+              font-size: 11px;
+              cursor: pointer;
+              box-shadow: 0 0 15px rgba(244, 63, 94, 0.5), inset 0 0 10px rgba(255,255,255,0.4);
+              transition: transform 0.2s ease, all 0.25s ease;
+            "
+          >
+            🫧<br>ANALISIS
+          </button>
+        </div>
+
+        <!-- Readout Status Gelembung -->
+        <div id="bubbleReadout" style="
+          background-color: #090d16;
+          border: 2px solid #facc15;
+          color: #facc15;
+          padding: 9px 12px;
+          font-size: 12px;
+          font-weight: 900;
+          letter-spacing: 0.5px;
+          margin-bottom: 14px;
+        ">
+          ✨ Sentuh salah satu gelembung di atas untuk mengalirkan Hamon! ✨
+        </div>
+
+        <!-- 3 Parameter Penutup Finale -->
+        <div style="
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+          font-size: 11px;
+          font-weight: 900;
+        ">
+          <div style="background: #1e293b; border: 2px solid #000000; padding: 8px 4px; color: #38bdf8;">
+            STATUS<br><span style="color: #ffffff;">SELESAI ✅</span>
+          </div>
+          <div style="background: #1e293b; border: 2px solid #000000; padding: 8px 4px; color: #facc15;">
+            HAMON ENERGY<br><span style="color: #ffffff;">100% MAX ☀️</span>
+          </div>
+          <div style="background: #1e293b; border: 2px solid #000000; padding: 8px 4px; color: #f43f5e;">
+            JOJO ARCHIVE<br><span style="color: #ffffff;">PART 1–7 🏆</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- NAVIGASI ANTAR PROYEK KIMIA -->
+      <nav class="sub-nav" aria-label="Navigasi Proyek Kimia">
+        <div class="sub-nav-title">★ Jelajahi Proyek Kimia Lainnya ★</div>
+        <div class="sub-nav-links">
+          <a href="kimia-karya1.html">☀️ Proyek 1</a>
+          <a href="kimia-karya2.html">🔮 Proyek 2</a>
+          <a href="kimia-karya3.html" class="active-karya">🫧 Proyek 3</a>
+        </div>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="hm-footer">
+    <p style="margin: 0 0 8px;">© 2026 Axel Sectio Reginaldi · Hamon Saga Chemistry Edition</p>
+    <a href="kimia.html">← Kembali ke Proyek Kimia</a>
+  </footer>
+
+  <script>
+    function toggleHamon() {
+      document.body.classList.toggle("hamon-overdrive");
+      const q = document.getElementById("hmQuote");
+      q.textContent = document.body.classList.contains("hamon-overdrive")
+        ? "🫧 HAMON BUBBLE LAUNCHER! Cahaya keemasan memancar dari setiap gelembung!"
+        : "🫧 Mode normal aktif. Klik lagi kapan saja!";
+    }
+
+    const josephLines = [
+      "🫧 Shabon Launcher! Tegangan permukaan air & sabun bekerja secara ilmiah!",
+      "💎 RED STONE OF AJA! Memfokuskan energi cahaya hingga 100%!",
+      "🤝 Ikatan kimia & ikatan JoBro tak akan pernah terputus!",
+      "🎉 SELESAI! Seluruh rangkaian Part 1 sampai Part 7 telah terkumpul!"
+    ];
+    let jIdx = 0;
+    function nextYouWillSay() {
+      document.getElementById("hmQuote").textContent = josephLines[jIdx];
+      jIdx = (jIdx + 1) % josephLines.length;
+    }
+
+    function toggleAja() {
+      const box = document.getElementById("ajaBox");
+      const btn = document.getElementById("ajaBtn");
+      box.classList.toggle("open");
+      btn.textContent = box.classList.contains("open")
+        ? "💎 TUTUP CATATAN RED STONE OF AJA"
+        : "💎 RED STONE OF AJA: BUKA KESIMPULAN SINGKAT";
+    }
+
+    /** @param {HTMLElement} frame */
+    function togglePhotoZoom(frame) {
+      frame.classList.toggle("zoomed");
+    }
+
+    /**
+     * @param {HTMLButtonElement} btn
+     * @param {string} msg
+     */
+    function chargeBubble(btn, msg) {
+      btn.style.background = "radial-gradient(circle at 30% 30%, #fef08a, #f59e0b 70%, #b45309 100%)";
+      btn.style.borderColor = "#facc15";
+      btn.style.color = "#000000";
+      btn.style.transform = "scale(1.1)";
+      btn.style.boxShadow = "0 0 22px #facc15";
+      document.getElementById("bubbleReadout").textContent = msg;
+
+      setTimeout(() => {
+        btn.style.transform = "scale(1)";
+      }, 250);
+    }
+  </script>
+</body>
+</html>

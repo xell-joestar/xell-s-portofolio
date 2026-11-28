@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek Kimia 1 - Portofolio</title>
+  <link rel="stylesheet" href="style-kimia-detail.css">
+</head>
+<body>
+  <div class="hamon-ticker">
+    ☀️ PART 1: PHANTOM BLOOD • SUNLIGHT HAMON LAB • PROYEK 01 ☀️
+  </div>
+
+  <nav class="hm-navbar">
+    <a href="kimia.html" class="hm-nav-btn nav-back">← Kembali ke Daftar Kimia</a>
+    <a href="index.html" class="hm-nav-btn nav-home">★ Portofolio Utama</a>
+  </nav>
+
+  <main class="hm-container">
+    <article class="lab-sheet">
+      <!-- 1. JUDUL SUB PROYEK KIMIA -->
+      <header class="lab-header">
+        <span class="hamon-badge">☀️ JONATHAN JOESTAR • PROYEK KIMIA 01</span>
+        <h1>Membuat Es Krim</h1>
+        <div class="lab-meta">
+          <span>Mapel: Kimia</span>
+          <span>Kategori: Praktikum</span>
+          <span>Tahun: 2026</span>
+        </div>
+      </header>
+
+      <!-- GIMMICK INTERAKTIF PART 1 & 2 -->
+      <div class="gimmick-bar">
+        <button type="button" class="hm-btn btn-sunlight" onclick="toggleHamon()">
+          ☀️ SUNLIGHT YELLOW OVERDRIVE!
+        </button>
+        <button type="button" class="hm-btn btn-predict" onclick="nextYouWillSay()">
+          🔮 PREDIKSI JOSEPH ("Next you'll say...")
+        </button>
+      </div>
+      <div id="hmQuote" class="prediction-banner">
+        "Kono Axel no kokoro wa furueru zo... Klik foto untuk memperbesar dokumentasi!"
+      </div>
+
+      <!-- 2. FOTO DOKUMENTASI PERTAMA (BISA DIGANTI VIDEO LOOPING) -->
+      <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>📸 DOKUMENTASI 01 • HASIL PERCOBAAN</span>
+          <span>OVERDRIVE!</span>
+        </div>
+        <img
+          src="images/ss4.png"
+          alt="Dokumentasi 1 Proyek Kimia 1"
+          onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22450%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230f172a%22/><text x=%2250%25%22 y=%2248%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23facc15%22 font-family=%22Arial%22 font-size=%2224%22 font-weight=%22bold%22>🧪 TEMPAT FOTO DOKUMENTASI 1</text><text x=%2250%25%22 y=%2258%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%2338bdf8%22 font-family=%22Arial%22 font-size=%2216%22>(Masukkan foto ke folder images/kimia1-foto1.jpg)</text></svg>'"
+        >
+        <figcaption class="photo-caption">
+          Praktikum Kimia Membuat Eskrim
+        </figcaption>
+      </figure>
+
+      <!-- 3. SPACE PENJELASAN KEGIATAN / PRAKTIKUM -->
+      <section class="story-box">
+        <h2>☀️ Penjelasan Praktikum &amp; Kegiatan</h2>
+        <p>
+          Membuat es krim tanpa freezer yang menerapkan konsep sifat koligatif larutan, khususnya penurunan titik beku.
+          Metode ini memanfaatkan campuran es batu dan garam untuk membekukan adonan cair menjadi es krim yang lembut.
+        </p>
+        <p>
+          Menggunakan bahan dasar seperti susu UHT, gula pasir/Susu kental manis, es batu, dan garam
+        </p>
+      </section>
+
+      <!-- GIMMICK RED STONE OF AJA (CATATAN TAMBAHAN) -->
+      <div class="aja-section">
+        <button type="button" id="ajaBtn" class="aja-btn" onclick="toggleAja()">
+          💎 RED STONE OF AJA: BUKA KESIMPULAN SINGKAT
+        </button>
+        <div id="ajaBox" class="aja-content">
+          <strong>📌 Catatan:</strong> Proses mengaduknya melelahkan tapi juga menyenangkan
+        </div>
+      </div>
+
+      <!-- 4. FOTO DOKUMENTASI KEDUA -->
+       <figure class="photo-frame" onclick="togglePhotoZoom(this)">
+        <div class="photo-label">
+          <span>🎬 DOKUMENTASI VIDEO • LIVE REPLAY</span>
+          <span>MOODY BLUES!</span>
+        </div>
+
+        <!-- Ganti src dengan nama file MP4 kamu di dalam folder images -->
+        <video
+          src="images/vid4.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          style="
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+            border: 3px solid #000000;
+            background-color: #16071c;
+          "
+        >
+          Browser kamu tidak mendukung pemutaran video MP4.
+        </video>
+
+        <figcaption class="photo-caption">
+          Cuplikan proses pembuatan
+        </figcaption>
+      </figure>
+
+      <!-- NAVIGASI ANTAR PROYEK KIMIA -->
+      <nav class="sub-nav" aria-label="Navigasi Proyek Kimia">
+        <div class="sub-nav-title">★ Jelajahi Proyek Kimia Lainnya ★</div>
+        <div class="sub-nav-links">
+          <a href="kimia-karya1.html" class="active-karya">☀️ Proyek 1</a>
+          <a href="kimia-karya2.html">🔮 Proyek 2</a>
+          <a href="kimia-karya3.html">🫧 Proyek 3</a>
+        </div>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="hm-footer">
+    <p style="margin: 0 0 8px;">© 2026 Axel Sectio Reginaldi · Hamon Saga Chemistry Edition</p>
+    <a href="kimia.html">← Kembali ke Proyek Kimia</a>
+  </footer>
+
+  <script>
+    function toggleHamon() {
+      document.body.classList.toggle("hamon-overdrive");
+      const q = document.getElementById("hmQuote");
+      q.textContent = document.body.classList.contains("hamon-overdrive")
+        ? "☀️ SUNLIGHT YELLOW OVERDRIVE!! Energi reaksi kimia memuncak!"
+        : "☀️ Pernapasan Hamon stabil kembali. Klik lagi kapan saja!";
+    }
+
+    const josephLines = [
+      "🔮 Kalimatmu berikutnya adalah: 'Wah, laporan Kimianya rapi banget!' ...TO IU!",
+      "🎩 NIGERUNDAYO!! Lari dari tugas yang numpuk sebelum deadline!",
+      "☀️ HAMON OVERDRIVE! Pernapasan yang tepat menghasilkan energi oksidasi maksimal!",
+      "🎩 Even Speedwagon is impressed by this chemistry experiment!"
+    ];
+    let jIdx = 0;
+    function nextYouWillSay() {
+      document.getElementById("hmQuote").textContent = josephLines[jIdx];
+      jIdx = (jIdx + 1) % josephLines.length;
+    }
+
+    function toggleAja() {
+      const box = document.getElementById("ajaBox");
+      const btn = document.getElementById("ajaBtn");
+      box.classList.toggle("open");
+      btn.textContent = box.classList.contains("open")
+        ? "💎 TUTUP CATATAN RED STONE OF AJA"
+        : "💎 RED STONE OF AJA: BUKA KESIMPULAN SINGKAT";
+    }
+
+    /** @param {HTMLElement} frame */
+    function togglePhotoZoom(frame) {
+      frame.classList.toggle("zoomed");
+    }
+  </script>
+</body>
+</html>

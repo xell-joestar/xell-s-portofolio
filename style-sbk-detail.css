@@ -1,0 +1,409 @@
+/* =========================================================
+   CSS EKSTERNAL - DETAIL SUB-PROYEK SBK (3 HALAMAN)
+   TEMA: JOJO PART 5 (GOLDEN WIND / PASSIONE HIGH-FASHION)
+   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1c1917;
+  /* Latar belakang mewah Italia Passione: Deep Velvet + motif kumbang emas */
+  background-color: #16071c;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(236, 72, 153, 0.22) 0%, transparent 42%),
+    radial-gradient(circle at 85% 80%, rgba(250, 204, 21, 0.18) 0%, transparent 45%),
+    radial-gradient(#facc15 1.1px, transparent 1.1px),
+    radial-gradient(#f43f5e 1.1px, #16071c 1.1px);
+  background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+  background-position: 0 0, 0 0, 0 0, 18px 18px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: all 0.4s ease;
+}
+
+/* EFEK GIMMICK 1: GOLD EXPERIENCE REQUIEM MODE */
+body.requiem-mode {
+  background-color: #291d03;
+  background-image:
+    radial-gradient(circle at 50% 20%, rgba(250, 204, 21, 0.35) 0%, transparent 60%),
+    radial-gradient(#fef08a 1.4px, transparent 1.4px);
+  background-size: 100% 100%, 28px 28px;
+}
+
+body.requiem-mode .art-sheet {
+  box-shadow: 0 0 32px rgba(250, 204, 21, 0.8), 8px 8px 0px #facc15;
+  border-color: #facc15;
+}
+
+/* TICKER PASSIONE ITALIA */
+.passione-ticker {
+  background: linear-gradient(90deg, #09090b, #4a044e, #09090b);
+  color: #facc15;
+  border-bottom: 3px solid #facc15;
+  text-align: center;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* TOP NAVBAR */
+.gw-navbar {
+  background-color: #0f0514;
+  border-bottom: 4px solid #ec4899;
+  padding: 14px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gw-nav-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 8px 14px;
+  border: 3px solid #000000;
+  text-transform: uppercase;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav-back {
+  background-color: #facc15;
+  color: #000000;
+  box-shadow: 4px 4px 0px #ec4899;
+}
+
+.nav-home {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  box-shadow: 4px 4px 0px #facc15;
+}
+
+.gw-nav-btn:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* CONTAINER UTAMA */
+.gw-container {
+  width: min(760px, 92%);
+  margin: 28px auto 45px;
+}
+
+/* PANEL UTAMA KARYA (HIGH-FASHION EDITORIAL SHEET) */
+.art-sheet {
+  background: linear-gradient(180deg, #fffdf7 0%, #fdf2f8 100%);
+  border: 4px solid #000000;
+  outline: 4px solid #facc15;
+  box-shadow: 9px 9px 0px #ec4899;
+  padding: 28px 22px;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+/* HEADER JUDUL KARYA */
+.art-header {
+  text-align: center;
+  border-bottom: 4px double #000000;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+}
+
+.gang-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #be185d, #ec4899);
+  color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #facc15;
+  padding: 4px 14px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.art-header h1 {
+  margin: 4px 0 10px;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: clamp(24px, 5vw, 36px);
+  line-height: 1.2;
+  color: #2e0249;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 0px #facc15;
+}
+
+.art-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.art-meta span {
+  background-color: #09090b;
+  color: #facc15;
+  border: 2px solid #facc15;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 4px 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* BAR GIMMICK INTERAKTIF PART 5 */
+.gimmick-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.gw-btn {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border: 3px solid #000000;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.12s ease;
+}
+
+.gw-btn:active {
+  transform: translate(2px, 2px);
+}
+
+.btn-giorno {
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+  color: #000000;
+  box-shadow: 4px 4px 0px #be185d;
+}
+
+.btn-piano {
+  background: linear-gradient(90deg, #be185d, #ec4899);
+  color: #ffffff;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.quote-banner {
+  background-color: #16071c;
+  color: #facc15;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #ec4899;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 26px;
+}
+
+/* BINGKAI FOTO DOKUMENTASI (1 & 2) */
+.photo-frame {
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  box-shadow: 7px 7px 0px #be185d;
+  padding: 12px;
+  margin: 22px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.photo-frame:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0px #facc15;
+}
+
+.photo-frame.zoomed {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px #ec4899, 8px 8px 0px #facc15;
+}
+
+.photo-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #09090b;
+  color: #facc15;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.photo-frame img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  border: 3px solid #000000;
+  background-color: #f3e8ff;
+}
+
+.photo-caption {
+  margin: 10px 0 2px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #4a044e;
+  text-align: center;
+}
+
+/* KOTAK PENJELASAN KARYA */
+.story-box {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  border-left: 9px solid #ec4899;
+  box-shadow: 6px 6px 0px #facc15;
+  padding: 20px 18px;
+  margin: 24px 0;
+}
+
+.story-box h2 {
+  margin: 0 0 12px;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 19px;
+  color: #831843;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.story-box p {
+  margin: 0 0 12px;
+  color: #1c1917;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.story-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* GIMMICK STICKY FINGERS ZIPPER (BUKA CATATAN TAMBAHAN) */
+.zipper-section {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.zipper-track {
+  border-top: 4px dashed #1e3a8a;
+  position: relative;
+  margin: 16px 0;
+}
+
+.zipper-btn {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 10px 18px;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #facc15;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.zipper-content {
+  display: none;
+  background-color: #eff6ff;
+  border: 3px solid #000000;
+  border-left: 8px solid #1e3a8a;
+  box-shadow: 5px 5px 0px #1e3a8a;
+  padding: 16px;
+  margin-top: 14px;
+  text-align: left;
+  color: #1e1b4b;
+  font-size: 14px;
+}
+
+.zipper-content.open {
+  display: block;
+}
+
+/* NAVIGASI ANTAR SUB-KARYA SBK */
+.sub-nav {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 4px double #000000;
+  text-align: center;
+}
+
+.sub-nav-title {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #4a044e;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.sub-nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sub-nav-links a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 9px 14px;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 3px 3px 0px #ec4899;
+  text-transform: uppercase;
+}
+
+.sub-nav-links a.active-karya {
+  background-color: #facc15;
+  box-shadow: 3px 3px 0px #000000;
+}
+
+/* FOOTER */
+.gw-footer {
+  background-color: #09090b;
+  color: #facc15;
+  border-top: 5px solid #ec4899;
+  text-align: center;
+  padding: 22px 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.gw-footer a {
+  color: #f472b6;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .art-sheet {
+    padding: 20px 15px;
+  }
+  .gw-navbar {
+    padding: 12px 4%;
+  }
+  .gw-nav-btn {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+}
